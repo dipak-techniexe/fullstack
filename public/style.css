@@ -1,0 +1,93 @@
+.contestPreview {
+  box-sizing: border-box;
+  margin: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px; }
+  .contestPreview .cateName {
+    border-bottom: 1px solid #ccc;
+    padding: 0.5em 1em;
+    font-weight: bold;
+    background-color: #eee; }
+  .contestPreview .contName {
+    padding: 0.5em 1em; }
+
+.panel {
+  box-sizing: border-box;
+  margin: 1em 0;
+  border: 1px solid #ccc;
+  border-radius: 5px; }
+  .panel .panel-heading {
+    border-bottom: 1px solid #ccc;
+    padding: 0.5em 1em;
+    font-weight: bold;
+    background-color: #eee; }
+    .panel .panel-heading h3 {
+      margin: 0; }
+  .panel .panel-body {
+    padding: 1em;
+    overflow: hidden; }
+    .panel .panel-body .list-group {
+      margin: 0;
+      list-style: none;
+      list-style-type: none;
+      padding: 0;
+      border: 1px solid #ccc;
+      border-radius: 3px; }
+      .panel .panel-body .list-group .list-group-item {
+        margin: 0;
+        list-style: none;
+        list-style-type: none;
+        padding: 5px 15px;
+        border-bottom: 1px solid #ccc;
+        line-height: 20px; }
+        .panel .panel-body .list-group .list-group-item:last-child {
+          border-bottom: 0;
+          overflow: hidden; }
+    .panel .panel-body form {
+      margin-bottom: 0; }
+      .panel .panel-body form input, .panel .panel-body form button {
+        float: left;
+        height: 34px;
+        padding: 0 15px;
+        color: #005465;
+        border: 1px solid #005465; }
+      .panel .panel-body form input {
+        width: calc(100% - 100px);
+        border: 1px solid #005465;
+        border-radius: 3px 0 0 3px; }
+      .panel .panel-body form button {
+        float: right;
+        width: 100px;
+        background-color: #44dfff;
+        font-weight: bold;
+        text-transform: uppercase;
+        border-radius: 0 3px 3px 0; }
+      .panel .panel-body form ::-webkit-input-placeholder {
+        /* Chrome/Opera/Safari */
+        color: #005465; }
+      .panel .panel-body form ::-moz-placeholder {
+        /* Firefox 19+ */
+        color: #005465; }
+      .panel .panel-body form :-ms-input-placeholder {
+        /* IE 10+ */
+        color: #005465; }
+      .panel .panel-body form :-moz-placeholder {
+        /* Firefox 18- */
+        color: #005465; }
+  .panel.panel-info {
+    border-color: #005465; }
+    .panel.panel-info .panel-heading {
+      color: #005465;
+      border-color: #005465;
+      background-color: #44dfff; }
+
+.link {
+  cursor: pointer; }
+
+.homeLink {
+  margin-top: 15px;
+  color: #0000ff; }
+
+h2 {
+  text-align: center;
+  margin-bottom: 0; }

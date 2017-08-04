@@ -1,0 +1,108 @@
+.contestPreview {
+    box-sizing: border-box;
+    margin: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    .cateName {
+        border-bottom:1px solid #ccc;
+        padding: 0.5em 1em;
+        font-weight: bold;
+        background-color: #eee;
+    }
+    .contName {
+        padding: 0.5em 1em;
+    }
+}
+.panel{
+    box-sizing: border-box;
+    margin: 1em 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    .panel-heading{
+        border-bottom:1px solid #ccc;
+        padding: 0.5em 1em;
+        font-weight: bold;
+        background-color: #eee;
+        h3{
+            margin: 0;
+        }
+    }
+    .panel-body{
+        padding:1em;
+        overflow: hidden;
+        .list-group{
+            margin:0;
+            list-style: none;
+            list-style-type: none;
+            padding: 0;
+            border:1px solid #ccc;
+            border-radius: 3px;
+            .list-group-item{
+                margin:0;
+                list-style: none;
+                list-style-type: none;
+                padding:5px 15px;
+                border-bottom:1px solid #ccc;
+                line-height: 20px;
+                &:last-child{
+                    border-bottom:0;
+                    overflow: hidden;
+                }
+            }
+        }
+        form{
+            margin-bottom: 0;
+            input, button{
+                float: left;
+                height: 34px;
+                padding:0 15px;
+                color:#005465;
+                border:1px solid #005465;
+            }
+            input{
+                width: calc(100% - 100px);
+                border:1px solid #005465;
+                border-radius: 3px 0 0 3px;
+            }
+            button{
+                float: right;
+                width: 100px;
+                background-color:#44dfff;
+                font-weight: bold;
+                text-transform: uppercase;
+                border-radius: 0 3px 3px 0;
+            }
+            ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+                color: #005465;
+            }
+            ::-moz-placeholder { /* Firefox 19+ */
+                color: #005465;
+            }
+            :-ms-input-placeholder { /* IE 10+ */
+                color: #005465;
+            }
+            :-moz-placeholder { /* Firefox 18- */
+                color: #005465;
+            }
+        }
+    }
+    &.panel-info{
+        border-color:#005465;
+        .panel-heading{
+            color:#005465;
+            border-color:#005465;
+            background-color:#44dfff;
+        }
+    }
+}
+.link{
+    cursor: pointer;
+}
+.homeLink{
+    margin-top: 15px;
+    color:#0000ff;
+}
+h2{
+    text-align: center;
+    margin-bottom: 0;
+}

@@ -1,20 +1,40 @@
 import config from './config';
 import apiRouter from './api';
+import sassMiddleware from 'node-sass-middleware';
+import path from 'path';
 
 import express from 'express';
 const server = express();
 
+import bodyParser from 'body-parser';
+server.use(bodyParser.json());
+
+server.use(sassMiddleware({
+  src: path.join(__dirname, 'sass'),
+  dest: path.join(__dirname, 'public')
+}));
+
 server.set('view engine', 'ejs');
 
-server.get('/', (req,res)=> {
-  res.render('index',{
-    content: 'Hello Express and <em>EJS!</em> working'
-  });
+import serverRender from './serverRender';
+
+server.get(['/', '/contest/:contestId'], (req,res)=> {
+  serverRender(req.params.contestId)
+    .then(({initMark, initData}) => {
+      res.render('index',{
+        initMark,
+        initData
+      });
+    })
+    .catch( error => {
+      console.error(error);
+      res.status(404).send('Bad Request');
+    });  
 });
 
 server.use('/api', apiRouter);
 server.use(express.static('public'));
 
-server.listen(config.port, ()=> {
+server.listen(config.port, config.host, ()=> {
   console.info('Express listening on port', config.port);
 });
